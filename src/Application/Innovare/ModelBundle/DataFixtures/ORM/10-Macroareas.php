@@ -1,9 +1,9 @@
 <?php
-// src/Innovare/ModelBundle/DataFixtures/ORM/10-Macroareas.php
+// src/Appication/Innovare/ModelBundle/DataFixtures/ORM/10-Macroareas.php
 
-namespace Innovare\ModelBundle\DataFixtures\ORM;
+namespace Application\Innovare\ModelBundle\DataFixtures\ORM;
 
-use Innovare\ModelBundle\Entity\Macroarea;
+use Application\Innovare\ModelBundle\Entity\Macroarea;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixturesInterface;
 use Doctrine\Common\Persistence\ObjectManager;
