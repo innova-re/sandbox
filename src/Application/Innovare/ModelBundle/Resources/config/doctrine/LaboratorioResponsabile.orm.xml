@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Application\Innovare\ModelBundle\Entity\LaboratorioResponsabile" table="laboratorio_responsabile">
+    <indexes>
+      <index name="FK_laboratorio_responsabile2_22" columns="id_foto_laboratorio"/>
+    </indexes>
+    <id name="idLaboratorio" association-key="true"/>
+    <field name="nome" type="string" column="nome" length="250" nullable="false"/>
+    <field name="cognome" type="string" column="cognome" length="250" nullable="false"/>
+    <field name="matricola" type="string" column="matricola" length="250" nullable="false"/>
+    <field name="qualifica" type="string" column="qualifica" length="250" nullable="false"/>
+    <field name="email" type="string" column="email" length="250" nullable="false"/>
+    <field name="telefono" type="string" column="telefono" length="30" nullable="false"/>
+    <field name="contattiLaboratorio" type="string" column="contatti_laboratorio" length="350" nullable="false"/>
+    <field name="idFotoLaboratorio" type="boolean" column="id_foto_laboratorio" nullable="false"/>
+    <field name="noteSuPossibiliFuturiServizi" type="string" column="note_su_possibili_futuri_servizi" length="250" nullable="true"/>
+    <one-to-one field="idLaboratorio" target-entity="Laboratorio">
+      <join-columns>
+        <join-column name="id_laboratorio" referenced-column-name="id_laboratorio"/>
+      </join-columns>
+    </one-to-one>
+  </entity>
+</doctrine-mapping>

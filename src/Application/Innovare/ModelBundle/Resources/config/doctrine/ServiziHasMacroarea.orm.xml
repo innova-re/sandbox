@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Application\Innovare\ModelBundle\Entity\ServiziHasMacroarea" table="servizi_has_macroarea">
+    <indexes>
+      <index name="FK_servizi_has_macroarea_2" columns="id_macroarea"/>
+      <index name="FK_servizi_has_macroarea_3" columns="id_ambito_intervento"/>
+      <index name="IDX_C9D19B4B88AA8640" columns="id_servizio"/>
+    </indexes>
+    <id name="idServizio" association-key="true"/>
+    <id name="idMacroarea" association-key="true"/>
+    <id name="idAmbitoIntervento" association-key="true"/>
+    <one-to-one field="idAmbitoIntervento" target-entity="AmbitoIntervento">
+      <join-columns>
+        <join-column name="id_ambito_intervento" referenced-column-name="id"/>
+      </join-columns>
+    </one-to-one>
+    <one-to-one field="idMacroarea" target-entity="Macroarea">
+      <join-columns>
+        <join-column name="id_macroarea" referenced-column-name="id"/>
+      </join-columns>
+    </one-to-one>
+    <one-to-one field="idServizio" target-entity="Servizi">
+      <join-columns>
+        <join-column name="id_servizio" referenced-column-name="id"/>
+      </join-columns>
+    </one-to-one>
+  </entity>
+</doctrine-mapping>

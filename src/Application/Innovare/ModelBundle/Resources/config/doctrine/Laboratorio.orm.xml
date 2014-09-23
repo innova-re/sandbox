@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Application\Innovare\ModelBundle\Entity\Laboratorio" table="laboratorio">
+    <indexes>
+      <index name="FK_laboratorio_test_3_RESPONSABILE_MAPPATURA1" columns="id_responsabile_mappatura"/>
+      <index name="FK_laboratorio_test_1_PROVINCIA1" columns="id_provincia"/>
+      <index name="FK_laboratorio_test_3_COMUNE2" columns="id_comune"/>
+      <index name="FK_laboratorio_4_ENTE1" columns="id_ente"/>
+      <index name="FK_laboratorio_5_AFFERENZA2" columns="id_afferenza"/>
+      <index name="FK_laboratorio_6_AREA1" columns="id_area"/>
+      <index name="FK_laboratorio_7_ANAGRAFICA_RILEVATORE1" columns="id_anagrafica_rilevatore"/>
+    </indexes>
+    <id name="idLaboratorio" type="integer" column="id_laboratorio">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="notaEnte" type="string" column="nota_ente" length="250" nullable="true"/>
+    <field name="notaAfferenza" type="string" column="nota_afferenza" length="250" nullable="true"/>
+    <field name="notaArea" type="string" column="nota_area" length="250" nullable="true"/>
+    <field name="nome" type="string" column="nome" length="250" nullable="false"/>
+    <field name="descrizione" type="string" column="descrizione" length="1200" nullable="false"/>
+    <field name="paroleChiave" type="string" column="parole_chiave" length="250" nullable="false"/>
+    <field name="sede" type="string" column="sede" length="250" nullable="true"/>
+    <field name="edificio" type="string" column="edificio" length="250" nullable="true"/>
+    <field name="ubicazione" type="string" column="ubicazione" length="250" nullable="false"/>
+    <field name="piano" type="string" column="piano" length="250" nullable="true"/>
+    <field name="indirizzo" type="string" column="indirizzo" length="250" nullable="false"/>
+    <field name="numeroCivico" type="string" column="numero_civico" length="250" nullable="true"/>
+    <field name="gpsLatitudine" type="decimal" column="gps_latitudine" precision="10" scale="7" nullable="false"/>
+    <field name="gpsLongitudine" type="decimal" column="gps_longitudine" precision="10" scale="7" nullable="false"/>
+    <field name="telefono" type="string" column="telefono" length="30" nullable="true"/>
+    <field name="sitoweb" type="string" column="sitoweb" length="250" nullable="false"/>
+    <field name="idRegolamentoAccesso" type="boolean" column="id_regolamento_accesso" nullable="false"/>
+    <field name="infoRegolamentoAccesso" type="string" column="info_regolamento_accesso" length="350" nullable="true"/>
+    <field name="note" type="string" column="note" length="250" nullable="true"/>
+    <field name="codice" type="string" column="codice" length="200" nullable="false"/>
+    <field name="createAt" type="date" column="create_at" nullable="true"/>
+    <field name="dataAggiornamentoRilevazione" type="datetime" column="data_aggiornamento_rilevazione" nullable="false"/>
+    <field name="updateAt" type="datetime" column="update_at" nullable="true"/>
+    <field name="descrizioneWeb" type="string" column="descrizione_web" length="1200" nullable="true"/>
+    <field name="cap" type="string" column="cap" length="10" nullable="false"/>
+    <field name="pubblicare" type="boolean" column="pubblicare" nullable="false"/>
+    <field name="stanza" type="string" column="stanza" length="250" nullable="true"/>
+    <field name="commentiRilevazione" type="string" column="commenti_rilevazione" length="250" nullable="true"/>
+    <field name="idUtente" type="integer" column="id_utente" nullable="true"/>
+    <field name="parolaChiave1" type="string" column="parola_chiave1" length="100" nullable="true"/>
+    <field name="parolaChiave2" type="string" column="parola_chiave2" length="100" nullable="true"/>
+    <field name="parolaChiave3" type="string" column="parola_chiave3" length="100" nullable="true"/>
+    <field name="parolaChiave4" type="string" column="parola_chiave4" length="100" nullable="true"/>
+    <field name="parolaChiave5" type="string" column="parola_chiave5" length="100" nullable="true"/>
+    <field name="dataPrimaRilevazione" type="datetime" column="data_prima_rilevazione" nullable="true"/>
+    <field name="percorsoGps" type="string" column="percorso_gps" length="500" nullable="true"/>
+    <many-to-one field="idProvincia" target-entity="RegioneProvincia">
+      <join-columns>
+        <join-column name="id_provincia" referenced-column-name="codice_provincia"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idComune" target-entity="Comune">
+      <join-columns>
+        <join-column name="id_comune" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idAnagraficaRilevatore" target-entity="AnagraficaRilevatori">
+      <join-columns>
+        <join-column name="id_anagrafica_rilevatore" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idResponsabileMappatura" target-entity="ResponsabileRilevazione">
+      <join-columns>
+        <join-column name="id_responsabile_mappatura" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idArea" target-entity="Area">
+      <join-columns>
+        <join-column name="id_area" referenced-column-name="id_area"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idEnte" target-entity="Ente">
+      <join-columns>
+        <join-column name="id_ente" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idAfferenza" target-entity="Afferenza">
+      <join-columns>
+        <join-column name="id_afferenza" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="idServizioTerritorio" target-entity="ServizioTerritorio" inversed-by="idLaboratorio">
+      <join-table name="laboratorio_has_servizio_territorio">
+        <join-columns>
+          <join-column name="id_laboratorio" referenced-column-name="id_laboratorio"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="id_servizio_territorio" referenced-column-name="id"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+    <many-to-many field="idAttivitaDidattica" target-entity="AttivitaDidattica" inversed-by="idLaboratorio">
+      <join-table name="laboratorio_has_attivita_didattica">
+        <join-columns>
+          <join-column name="id_laboratorio" referenced-column-name="id_laboratorio"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="id_attivita_didattica" referenced-column-name="id"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+    <many-to-many field="idAttivitaRicerca" target-entity="AttivitaRicerca" inversed-by="idLaboratorio">
+      <join-table name="laboratorio_has_attivita_ricerca">
+        <join-columns>
+          <join-column name="id_laboratorio" referenced-column-name="id_laboratorio"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="id_attivita_ricerca" referenced-column-name="id"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+  </entity>
+</doctrine-mapping>

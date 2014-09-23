@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Application\Innovare\ModelBundle\Entity\LaboratorioHasMiur" table="laboratorio_has_miur">
+    <indexes>
+      <index name="FK_laboratorio_has_miur_1_MIUR_AREA1" columns="id_miur_area"/>
+      <index name="FK_laboratorio_has_miur_3_SSD1" columns="id_miur_ssd"/>
+      <index name="IDX_746E4F27852FA021" columns="id_laboratorio"/>
+    </indexes>
+    <id name="idMiurArea" association-key="true"/>
+    <id name="idLaboratorio" association-key="true"/>
+    <id name="idMiurSsd" association-key="true"/>
+    <one-to-one field="idMiurSsd" target-entity="MiurSsd">
+      <join-columns>
+        <join-column name="id_miur_ssd" referenced-column-name="id"/>
+      </join-columns>
+    </one-to-one>
+    <one-to-one field="idLaboratorio" target-entity="Laboratorio">
+      <join-columns>
+        <join-column name="id_laboratorio" referenced-column-name="id_laboratorio"/>
+      </join-columns>
+    </one-to-one>
+    <one-to-one field="idMiurArea" target-entity="MiurArea">
+      <join-columns>
+        <join-column name="id_miur_area" referenced-column-name="id"/>
+      </join-columns>
+    </one-to-one>
+  </entity>
+</doctrine-mapping>

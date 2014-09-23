@@ -1,3 +1,8 @@
+application_innovare_model:
+    resource: "@ApplicationInnovareModelBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 application_innovare_core:
     resource: "@ApplicationInnovareCoreBundle/Controller/"
     type:     annotation

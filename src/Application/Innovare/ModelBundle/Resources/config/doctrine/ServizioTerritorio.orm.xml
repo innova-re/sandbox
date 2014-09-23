@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Application\Innovare\ModelBundle\Entity\ServizioTerritorio" table="servizio_territorio">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nome" type="string" column="nome" length="100" nullable="false"/>
+    <field name="descrizione" type="string" column="descrizione" length="200" nullable="true"/>
+    <many-to-many field="idLaboratorio" target-entity="Laboratorio" mapped-by="idServizioTerritorio"/>
+  </entity>
+</doctrine-mapping>

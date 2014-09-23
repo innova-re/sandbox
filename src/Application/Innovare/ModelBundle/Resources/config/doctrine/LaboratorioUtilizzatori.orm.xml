@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Application\Innovare\ModelBundle\Entity\LaboratorioUtilizzatori" table="laboratorio_utilizzatori">
+    <indexes>
+      <index name="FK_laboratorio_tecnici_1" columns="id_laboratorio"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="professori" type="integer" column="professori" nullable="true"/>
+    <field name="ricercatori" type="integer" column="ricercatori" nullable="true"/>
+    <field name="tecnici" type="integer" column="tecnici" nullable="true"/>
+    <field name="assegnisti" type="integer" column="assegnisti" nullable="true"/>
+    <field name="borsistiContrattisti" type="integer" column="borsisti_contrattisti" nullable="true"/>
+    <field name="dottorandiSpecializzandi" type="integer" column="dottorandi_specializzandi" nullable="true"/>
+    <field name="studenti" type="integer" column="studenti" nullable="true"/>
+    <field name="altriUtilizzatori" type="integer" column="altri_utilizzatori" nullable="true"/>
+    <many-to-one field="idLaboratorio" target-entity="Laboratorio">
+      <join-columns>
+        <join-column name="id_laboratorio" referenced-column-name="id_laboratorio"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
