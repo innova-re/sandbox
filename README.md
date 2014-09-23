@@ -15,6 +15,10 @@ Innovarecomes pre-configured with the following bundles:
 
 Installation
 ------------
+Check the intl extensions of your PHP, if the result is an empty string please install it:
+    php -m | grep intl
+    intl
+
 Configure your database:
 
     CREATE DATABASE innovare_DB;
