@@ -1,10 +1,10 @@
-Sonata Standard Edition
+Innovare
 =======================
 
 What's inside?
 --------------
 
-Sonata Standard Edition comes pre-configured with the following bundles:
+Innovarecomes pre-configured with the following bundles:
 
 * Bundles from Symfony Standard distribution
 * Sonata Admin Bundles: Admin and Doctrine ORM Admin
@@ -15,32 +15,49 @@ Sonata Standard Edition comes pre-configured with the following bundles:
 
 Installation
 ------------
+Configure your database:
+
+    CREATE DATABASE innovare_DB;
+    CREATE USER 'innovare_user'@'localhost' IDENTIFIED BY 'innovare_psw';
+    GRANT ALL ON innovare_DB.* TO 'innovare_user'@'localhost';
+
+Get source code:
+
+    git clone git@github.com:innova-re/sandbox.git
 
 Get composer:
 
     curl -s http://getcomposer.org/installer | php
 
-Run the following command for the 2.3 branch:
+Run the following command:
 
-    php composer.phar create-project sonata-project/sandbox:2.3.x-dev
-    
-Or to get the 2.3 develop branch:
+    php composer.phar update
 
-    php composer.phar create-project sonata-project/sandbox:dev-2.3-develop
+Update your database:
 
-The installation process used Incenteev's ParameterHandler to handle parameters.yml configuration. With the current
-installation, it is possible to use environment variables to configure this file:
+    php app/console doctrine:schema:update --force
 
-    DATABASE_NAME=sonata DATABASE_USER=root DATABASE_PASSWORD="" php composer.phar create-project sonata-project/sandbox:dev-2.3-develop
+Load the fixtures:
+
+    php app/console doctrine:fixtures:load
+
+Install assets:
+
+    php app/console assets:install web --symlink
+
+Update the routes and create a snapshot:
+
+    php app/console sonata:page:update-core-routes --site=all
+    php app/console sonata:page:create-snapshots --site=all
 
 Run
 ---
 
 If you are running PHP5.4, you can use the built in server to start the demo:
 
-    php -S localhost:9090 -t web/app
+    php app/console server:run
 
-Now open your browser and go to http://localhost:9090/
+Now open your browser and go to http://localhost:8000/
 
 Tests
 -----
