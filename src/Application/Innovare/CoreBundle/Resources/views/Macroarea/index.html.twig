@@ -1,0 +1,10 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}InnovareCoreBundle:Macroarea:indexMacroarea{% endblock %}
+
+{% block body %}
+	<h1>Welcome to the Macroarea:indexMacroarea page</h1>
+	{% for macroarea in macroareas %}
+		{{ include('InnovareCoreBundle:Macroarea:_macroarea.html.twig', {macroarea: macroarea}) }}
+	{% endfor %}
+{% endblock %}
