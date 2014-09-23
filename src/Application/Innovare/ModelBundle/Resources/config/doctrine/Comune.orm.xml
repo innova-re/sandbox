@@ -21,7 +21,7 @@
     <field name="altitudineDelCentroInMetri" type="integer" column="altitudine_del_centro_in_metri" nullable="true"/>
     <field name="comuneLitoraneo" type="integer" column="comune_litoraneo" nullable="true"/>
     <field name="comuneMontano" type="string" column="comune_montano" length="2" nullable="true"/>
-    <field name="codiceSistemaLocaleDelLavoro2001" type="integer" column="codice_sistema_locale_del _lavoro_2001" nullable="true"/>
+    <field name="codiceSistemaLocaleDelLavoro2001" type="integer" column="codice_sistema_locale_del_lavoro_2001" nullable="true"/>
     <field name="denominazioneSistemaLocaleDelLavoro2001" type="string" column="denominazione_sistema_locale_del_lavoro_2001" length="20" nullable="true"/>
     <field name="superficieTerritorialeTotaleKmq" type="string" column="superficie_territoriale_totale_kmq" length="5" nullable="true"/>
     <field name="popolazioneLegale200121102001" type="integer" column="popolazione_legale_2001_21_10_2001" nullable="true"/>
