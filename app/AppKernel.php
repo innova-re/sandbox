@@ -128,7 +128,8 @@ class AppKernel extends Kernel
 
 
 
-            new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle()
+            new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
+            new Application\Innovare\CoreBundle\ApplicationInnovareCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
