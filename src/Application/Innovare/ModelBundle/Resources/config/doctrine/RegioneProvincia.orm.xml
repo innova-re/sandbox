@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Application\Innovare\ModelBundle\Entity\RegioneProvincia" table="regione_provincia">
+    <id name="codiceProvincia" type="integer" column="codice_provincia">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="codiceRipartizione" type="integer" column="codice_ripartizione" nullable="true"/>
+    <field name="codiceNuts12006" type="string" column="codice_NUTS1_2006" length="3" nullable="true"/>
+    <field name="codiceNuts12010" type="string" column="codice_NUTS1_2010" length="3" nullable="true"/>
+    <field name="ripartizioneGeograficaMaiuscolo" type="string" column="ripartizione_geografica_Maiuscolo" length="10" nullable="true"/>
+    <field name="ripartizioneGeografica" type="string" column="ripartizione_geografica" length="10" nullable="true"/>
+    <field name="codiceRegione" type="integer" column="codice_regione" nullable="true"/>
+    <field name="codiceNuts22006A" type="string" column="codice_NUTS2_2006_a" length="4" nullable="true"/>
+    <field name="codiceNuts22010A" type="string" column="codice_NUTS2_2010_a" length="4" nullable="true"/>
+    <field name="denominazioneRegioneMaiuscolo" type="string" column="denominazione_regione_Maiuscolo" length="29" nullable="true"/>
+    <field name="denominazioneRegione" type="string" column="denominazione_regione" length="29" nullable="true"/>
+    <field name="codiceNuts32006" type="string" column="codice_NUTS3_2006" length="5" nullable="true"/>
+    <field name="codiceNuts32010" type="string" column="codice_NUTS3_2010" length="5" nullable="true"/>
+    <field name="denominazioneProvincia" type="string" column="denominazione_provincia" length="29" nullable="true"/>
+    <field name="siglaAutomobilistica" type="string" column="sigla_automobilistica" length="2" nullable="true"/>
+  </entity>
+</doctrine-mapping>

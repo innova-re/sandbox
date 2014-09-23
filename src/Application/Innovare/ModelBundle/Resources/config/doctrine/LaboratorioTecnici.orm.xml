@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Application\Innovare\ModelBundle\Entity\LaboratorioTecnici" table="laboratorio_tecnici">
+    <indexes>
+      <index name="new_fk_constraint1" columns="id_laboratorio"/>
+      <index name="FK_laboratorio_tecnici_2" columns="id_tipologia_contratto"/>
+      <index name="FK_laboratorio_tecnici_3" columns="id_percentuale_tempo_dedicato"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nome" type="string" column="nome" length="250" nullable="false"/>
+    <field name="cognome" type="string" column="cognome" length="250" nullable="false"/>
+    <field name="matricola" type="string" column="matricola" length="20" nullable="false"/>
+    <field name="noteTecnico" type="string" column="note_tecnico" length="250" nullable="true"/>
+    <many-to-one field="idLaboratorio" target-entity="Laboratorio">
+      <join-columns>
+        <join-column name="id_laboratorio" referenced-column-name="id_laboratorio"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idPercentualeTempoDedicato" target-entity="PercentualeTempo">
+      <join-columns>
+        <join-column name="id_percentuale_tempo_dedicato" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idTipologiaContratto" target-entity="TipologiaContratto">
+      <join-columns>
+        <join-column name="id_tipologia_contratto" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
