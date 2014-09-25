@@ -10,3 +10,9 @@ services:
         arguments: [~, Application\Innovare\ModelBundle\Entity\Macroarea, ApplicationInnovareCoreBundle:MacroareaAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Macroarea}
+
+    innovare.admin.strumenti:
+        class: Application\Innovare\CoreBundle\Admin\StrumentiAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\Strumenti, ApplicationInnovareCoreBundle:StrumentiAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Strumenti}
