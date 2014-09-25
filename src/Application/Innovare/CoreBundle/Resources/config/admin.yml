@@ -16,3 +16,9 @@ services:
         arguments: [~, Application\Innovare\ModelBundle\Entity\Strumenti, ApplicationInnovareCoreBundle:StrumentiAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Strumenti}
+
+    innovare.admin.laboratorio:
+        class: Application\Innovare\CoreBundle\Admin\LaboratorioAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\Laboratorio, ApplicationInnovareCoreBundle:LaboratorioAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Laboratorio}
