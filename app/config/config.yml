@@ -43,6 +43,9 @@ imports:
     - { resource: sonata/sonata_customer.yml }
     - { resource: sonata/sonata_basket.yml }
 
+    # Innovare bundles
+    - { resource: @ApplicationInnovareCoreBundle/Resources/config/admin.yml }
+
 framework:
     #esi:                   ~
     translator:

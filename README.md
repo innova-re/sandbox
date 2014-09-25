@@ -54,6 +54,36 @@ Update the routes and create a snapshot:
     php app/console sonata:page:update-core-routes --site=all
     php app/console sonata:page:create-snapshots --site=all
 
+Create a new administration service for an existing entity.
+---
+
+In order to list the existing administration service you can run the following command:
+
+    php app/console sonata:admin:list
+
+If you want to add a new administration service for an existing "innovare" entity, the recommended way is the following:
+
+    > php app/console sonata:admin:generate
+
+    The fully qualified model class: Application\Innovare\ModelBundle\Entity\<existing-entity>
+    The bundle name: ApplicationInnovareCoreBundle
+    The admin class basename: [default]
+    Do you want to generate a controller: [yes]
+    The controller class basename: [default]
+    Do you want to update the services YAML configuration file: [yes]
+    The services YAML configuration file: [admin.yml]
+    The admin service ID: [innovare.admin.[entity_name]]
+
+Check if the new administration service has been added by running:
+
+    php app/console sonata:admin:list
+    
+Get the router information just by running the following command
+
+    php app/console sonata:admin:explain [the item from sonata:admin:list]
+
+And then you need to get the router just by running
+
 Run
 ---
 
