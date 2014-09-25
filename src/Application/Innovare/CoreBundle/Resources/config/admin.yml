@@ -1,0 +1,6 @@
+services:
+    innovare.admin.afferenza:
+        class: Application\Innovare\CoreBundle\Admin\AfferenzaAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\Afferenza, ApplicationInnovareCoreBundle:AfferenzaAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Afferenza}
