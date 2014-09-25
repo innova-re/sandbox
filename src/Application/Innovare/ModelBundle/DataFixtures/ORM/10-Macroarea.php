@@ -11,7 +11,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 /*
  * Fixture for the Macroarea Entity
  */
-class LoadUserData implements FixtureInterface
+class LoadMacroareData implements FixtureInterface
 {
     /**
      * {@inheritDoc}
