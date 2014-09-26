@@ -26,20 +26,14 @@ class LoadAfferenzaData implements FixtureInterface
      */
     public function load(ObjectManager $manager)
     {
-        $afferenza1 = new Afferenza();
-        $afferenza1->setNome('Cesar');
-        $afferenza1->setDescrizione('Cesar');
+        $afferenzas = array('Cesar', 'Polilab', 'Dipartimento Universitario');
 
-        $afferenza2 = new Afferenza();
-        $afferenza2->setNome('Polilab');
-        $afferenza2->setDescrizione('Polilab');
-
-        $afferenza2 = new Afferenza();
-        $afferenza2->setNome('Dipartimento Universitario');
-        $afferenza2->setDescrizione('Dipartimento Universitario');
-
-        $manager->persist($afferenza1);
-        $manager->persist($afferenza2);
+        foreach ($afferenzas as $key => $value) {
+            $afferenza = new Afferenza();
+            $afferenza->setNome($value);
+            $afferenza->setDescrizione($value);
+            $manager->persist($afferenza);
+        }
         $manager->flush();
     }
 }

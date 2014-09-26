@@ -26,10 +26,21 @@ class LoadMacroareData implements FixtureInterface
      */
     public function load(ObjectManager $manager)
     {
-        $macroarea1 = new Macroarea();
-        $macroarea1->setNome('Agroalimentare');
+        $macroareas = array(
+            1 => 'Agroalimentare',
+            2 => 'Biosanitario',
+            3 => 'Costruzioni e Beni Culturali',
+            4 => 'Energia, Materiali e Ambienti',
+            5 => 'ICT e Design',
+            6 => 'Scienze della Vita',
+        );
 
-        $manager->persist($macroarea1);
+        foreach ($macroareas as $key => $value) {
+            $macroarea = new Macroarea();
+            $macroarea->setNome($value);
+            $manager->persist($macroarea);
+        }
+
         $manager->flush();
     }
 }
