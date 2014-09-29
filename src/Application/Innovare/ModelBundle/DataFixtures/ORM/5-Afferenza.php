@@ -29,6 +29,7 @@ class LoadAfferenzaData implements FixtureInterface
     {
         $entes = $manager->getRepository('ApplicationInnovareModelBundle:Ente')->findAll();
 
+        // TODO instead of specifying the external key number I should set the name from the "Ente.nome" Entity
         $afferenzas = array(
             array('Cesar', 'Cesar', 1),
             array('Polilab', 'Polilab', 1),
