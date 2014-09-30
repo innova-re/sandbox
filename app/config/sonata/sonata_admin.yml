@@ -56,6 +56,7 @@ sonata_admin:
                     - innovare.admin.macroarea
                     - innovare.admin.strumenti
                     - innovare.admin.laboratorio
+                    - innovare.admin.anagrafica_rilevatori
             sonata.admin.group.content:
                 label:           sonata_content
                 label_catalogue: SonataDemoBundle
