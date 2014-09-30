@@ -22,3 +22,9 @@ services:
         arguments: [~, Application\Innovare\ModelBundle\Entity\Laboratorio, ApplicationInnovareCoreBundle:LaboratorioAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Laboratorio}
+
+    innovare.admin.anagrafica_rilevatori:
+        class: Application\Innovare\CoreBundle\Admin\AnagraficaRilevatoriAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\AnagraficaRilevatori, ApplicationInnovareCoreBundle:AnagraficaRilevatoriAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: AnagraficaRilevatori}
