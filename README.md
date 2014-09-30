@@ -4,7 +4,7 @@ Innovare
 What's inside?
 --------------
 
-Innovarecomes pre-configured with the following bundles:
+Innovare comes pre-configured with the following bundles:
 
 * Bundles from Symfony Standard distribution
 * Sonata Admin Bundles: Admin and Doctrine ORM Admin
@@ -54,7 +54,7 @@ Update the routes and create a snapshot:
     php app/console sonata:page:update-core-routes --site=all
     php app/console sonata:page:create-snapshots --site=all
 
-Create a new administration service for an existing entity.
+Generate an administration service.
 ---
 
 In order to list the existing administration service you can run the following command:
@@ -90,6 +90,11 @@ Run
 If you are running PHP5.4, you can use the built in server to start the demo:
 
     php app/console server:run
+
+or you can specify a specific port in this way:
+
+    php app/console server:run 127.0.0.1:81
+
 
 Now open your browser and go to http://localhost:8000/
 
