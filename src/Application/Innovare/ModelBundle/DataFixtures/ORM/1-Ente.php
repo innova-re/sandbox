@@ -29,7 +29,7 @@ class LoadEnteData implements FixtureInterface
         $entes = array(
             array('Universita Degli Studi di Cagliari', 'Universita degli Studi di Cagliari'),
             array('Sardegnaricerche', 'Sardegnaricerche'),
-            array('Universita Degli Studi di Sassari', 'Universita Degli Studi di Sassari')
+            array('Universita Degli Studi di Sassari', 'Universita Degli Studi di Sassari'),
         );
 
         foreach ($entes as $key => $value) {
