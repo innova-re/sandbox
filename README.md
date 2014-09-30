@@ -77,7 +77,7 @@ If you want to add a new administration service for an existing "innovare" entit
 Check if the new administration service has been added by running:
 
     php app/console sonata:admin:list
-    
+
 Get the router information just by running the following command
 
     php app/console sonata:admin:explain [the item from sonata:admin:list]
@@ -92,6 +92,13 @@ If you are running PHP5.4, you can use the built in server to start the demo:
     php app/console server:run
 
 Now open your browser and go to http://localhost:8000/
+
+Translation
+-----
+When maintaining a bundle, you may inspect the usage of a translation message.
+To inspect all messages in the it locale for the ApplicationInnovareCoreBundle, run:
+
+    php app/console translation:debug it ApplicationInnovareCoreBundle
 
 Tests
 -----
