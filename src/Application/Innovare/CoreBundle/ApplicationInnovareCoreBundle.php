@@ -8,6 +8,6 @@ class ApplicationInnovareCoreBundle extends Bundle
 {
 	public function getParent()
 	{
-		return 'ApplicationSonataPageBundle';
+		return 'ApplicationSonataAdminBundle';
 	}
 }
