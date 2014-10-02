@@ -3,23 +3,23 @@
 
 namespace Application\Innovare\ModelBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\Persistence\ObjectManager;
 use Application\Innovare\ModelBundle\Entity\Afferenza;
 use Application\Innovare\ModelBundle\Entity\Ente;
-use Doctrine\Common\DataFixtures\FixtureInterface;
-use Doctrine\Common\DataFixtures\OrderedFixturesInterface;
-use Doctrine\Common\Persistence\ObjectManager;
 
 /*
  * Fixture for the Afferenza Entity
  */
-class LoadAfferenzaData implements FixtureInterface
+class LoadAfferenzaData extends AbstractFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritDoc}
      */
     public function getOrder()
     {
-        return 5;
+        return 11;
     }
 
     /**

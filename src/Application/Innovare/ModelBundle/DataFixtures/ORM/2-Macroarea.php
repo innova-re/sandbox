@@ -3,22 +3,22 @@
 
 namespace Application\Innovare\ModelBundle\DataFixtures\ORM;
 
-use Application\Innovare\ModelBundle\Entity\Macroarea;
-use Doctrine\Common\DataFixtures\FixtureInterface;
-use Doctrine\Common\DataFixtures\OrderedFixturesInterface;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Application\Innovare\ModelBundle\Entity\Macroarea;
 
 /*
  * Fixture for the Macroarea Entity
  */
-class LoadMacroareData implements FixtureInterface
+class LoadMacroareData extends AbstractFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritDoc}
      */
     public function getOrder()
     {
-        return 10;
+        return 2;
     }
 
     /**
