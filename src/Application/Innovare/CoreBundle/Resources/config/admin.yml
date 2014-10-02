@@ -28,3 +28,9 @@ services:
         arguments: [~, Application\Innovare\ModelBundle\Entity\AnagraficaRilevatori, ApplicationInnovareCoreBundle:AnagraficaRilevatoriAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: AnagraficaRilevatori}
+
+    innovare.admin.ambito_intervento:
+        class: Application\Innovare\CoreBundle\Admin\AmbitoInterventoAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\AmbitoIntervento, ApplicationInnovareCoreBundle:AmbitoInterventoAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: AmbitoIntervento}
