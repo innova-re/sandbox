@@ -57,6 +57,7 @@ sonata_admin:
                 items:
                     - innovare.admin.macroarea
                     - innovare.admin.afferenza
+                    - innovare.admin.area
                     - innovare.admin.ambito_intervento
 
             sonata.admin.group.contatti:

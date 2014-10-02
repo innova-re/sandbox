@@ -10,6 +10,8 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class AreaAdmin extends Admin
 {
+    public $supportsPreviewMode = true;
+
     /**
      * @param DatagridMapper $datagridMapper
      */
@@ -30,7 +32,6 @@ class AreaAdmin extends Admin
         $listMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('idArea')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -49,7 +50,7 @@ class AreaAdmin extends Admin
         $formMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('idArea')
+            ->add('idArea', 'hidden')
         ;
     }
 
@@ -61,7 +62,6 @@ class AreaAdmin extends Admin
         $showMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('idArea')
         ;
     }
 }
