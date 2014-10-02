@@ -47,6 +47,9 @@ class LoadProductData extends AbstractFixture implements OrderedFixtureInterface
      */
     public function load(ObjectManager $manager)
     {
+        #TODO the following command needs to speed up the load of the fixtures
+        return false;
+
         $productPool = $this->getProductPool();
 
         // default media
