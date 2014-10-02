@@ -20,6 +20,7 @@ sonata_admin:
     title:      %sonata_admin.title%
     title_logo: %sonata_admin.logo_title%
     options:
+        # TODO this option should be written into Innovare-Application
         form_type: horizontal
         html5_validate: false # does not use html5 validation
         pager_links: 5 # pager max links to display
