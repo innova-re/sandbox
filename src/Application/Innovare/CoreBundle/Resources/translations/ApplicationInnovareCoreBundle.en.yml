@@ -1,0 +1,7 @@
+placeholder:
+  afferenza:
+    nome: Inserisci il nome dell'afferenza (esempio...)
+    descrizione: Inserisci una breve descrizione
+  laboratorio:
+    nome: Inserisci il nome del laboratorio (campo obbligatorio)
+    notaAfferenza: Inserisci una descrizione (campo obbligatorio)
