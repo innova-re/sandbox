@@ -10,6 +10,8 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class MacroareaAdmin extends Admin
 {
+    public $supportsPreviewMode = true;
+
     /**
      * @param DatagridMapper $datagridMapper
      */

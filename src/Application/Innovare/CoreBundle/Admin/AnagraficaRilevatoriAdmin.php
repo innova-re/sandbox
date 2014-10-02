@@ -10,6 +10,8 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class AnagraficaRilevatoriAdmin extends Admin
 {
+    public $supportsPreviewMode = true;
+
     /**
      * @param DatagridMapper $datagridMapper
      */
