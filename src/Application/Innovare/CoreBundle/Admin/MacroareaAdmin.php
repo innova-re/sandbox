@@ -36,7 +36,6 @@ class MacroareaAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
-            ->add('id')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -57,7 +56,7 @@ class MacroareaAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
-            ->add('id')
+            ->add('id', 'hidden')
         ;
     }
 
@@ -71,7 +70,6 @@ class MacroareaAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
-            ->add('id')
         ;
     }
 }

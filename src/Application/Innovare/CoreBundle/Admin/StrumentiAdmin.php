@@ -54,7 +54,6 @@ class StrumentiAdmin extends Admin
             ->add('marca')
             ->add('modello')
             ->add('equipaggiamento')
-            ->add('idStrumento')
             ->add('nome')
             ->add('numeroInventario')
             ->add('ubicazione')
@@ -72,7 +71,6 @@ class StrumentiAdmin extends Admin
             ->add('garanzia')
             ->add('noteGaranzia')
             ->add('motivoDelNonUtilizzo')
-            ->add('id')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -93,7 +91,7 @@ class StrumentiAdmin extends Admin
             ->add('marca')
             ->add('modello')
             ->add('equipaggiamento')
-            ->add('idStrumento')
+            ->add('idStrumento', 'hidden')
             ->add('nome')
             ->add('numeroInventario')
             ->add('ubicazione')
@@ -111,7 +109,7 @@ class StrumentiAdmin extends Admin
             ->add('garanzia')
             ->add('noteGaranzia')
             ->add('motivoDelNonUtilizzo')
-            ->add('id')
+            ->add('id', 'hidden')
         ;
     }
 
@@ -125,7 +123,6 @@ class StrumentiAdmin extends Admin
             ->add('marca')
             ->add('modello')
             ->add('equipaggiamento')
-            ->add('idStrumento')
             ->add('nome')
             ->add('numeroInventario')
             ->add('ubicazione')
@@ -143,7 +140,6 @@ class StrumentiAdmin extends Admin
             ->add('garanzia')
             ->add('noteGaranzia')
             ->add('motivoDelNonUtilizzo')
-            ->add('id')
         ;
     }
 }

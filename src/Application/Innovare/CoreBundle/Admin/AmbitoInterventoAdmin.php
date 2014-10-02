@@ -10,6 +10,8 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class AmbitoInterventoAdmin extends Admin
 {
+    public $supportsPreviewMode = true;
+
     /**
      * @param DatagridMapper $datagridMapper
      */
@@ -34,7 +36,6 @@ class AmbitoInterventoAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
-            ->add('id')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -55,7 +56,7 @@ class AmbitoInterventoAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
-            ->add('id')
+            ->add('id', 'hidden')
         ;
     }
 
@@ -69,7 +70,6 @@ class AmbitoInterventoAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
-            ->add('id')
         ;
     }
 }
