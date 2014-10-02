@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Symfony\Component\Translation\TranslatorInterface;
 
 class LaboratorioAdmin extends Admin
 {
@@ -100,7 +101,6 @@ class LaboratorioAdmin extends Admin
             ->add('parolaChiave5')
             ->add('dataPrimaRilevazione')
             ->add('percorsoGps')
-            ->add('idLaboratorio')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -119,9 +119,14 @@ class LaboratorioAdmin extends Admin
         $formMapper
             ->add('notaEnte')
             ->add('notaAfferenza')
-            ->add('notaArea')
-            ->add('nome')
-            ->add('descrizione')
+            ->add('nome', 'text', array(
+                'translation_domain' => 'ApplicationInnovareCoreBundle',
+                'attr' => array('placeholder' => 'placeholder.laboratorio.nome'),
+            ))
+            ->add('descrizione', 'text', array(
+                'translation_domain' => 'ApplicationInnovareCoreBundle',
+                'attr' => array('placeholder' => 'placeholder.laboratorio.notaAfferenza')
+            ))
             ->add('paroleChiave')
             ->add('sede')
             ->add('edificio')
@@ -153,7 +158,7 @@ class LaboratorioAdmin extends Admin
             ->add('parolaChiave5')
             ->add('dataPrimaRilevazione')
             ->add('percorsoGps')
-            ->add('idLaboratorio')
+            ->add('idLaboratorio', 'hidden')
         ;
     }
 
@@ -199,7 +204,6 @@ class LaboratorioAdmin extends Admin
             ->add('parolaChiave5')
             ->add('dataPrimaRilevazione')
             ->add('percorsoGps')
-            ->add('idLaboratorio')
         ;
     }
 }

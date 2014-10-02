@@ -20,7 +20,6 @@ class AfferenzaAdmin extends Admin
         $datagridMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('id')
         ;
     }
 
@@ -32,7 +31,6 @@ class AfferenzaAdmin extends Admin
         $listMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('id')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -48,10 +46,17 @@ class AfferenzaAdmin extends Admin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
+        # TODO I should avoid to set every time translation_domain by using setDefaultOptions
         $formMapper
-            ->add('nome')
-            ->add('descrizione')
-            ->add('id')
+            ->add('nome', 'text', array(
+                'translation_domain' => 'ApplicationInnovareCoreBundle',
+                'attr' => array('placeholder' => 'placeholder.afferenza.nome')
+            ))
+            ->add('descrizione', 'text', array(
+                'translation_domain' => 'ApplicationInnovareCoreBundle',
+                'attr' => array('placeholder' => 'placeholder.afferenza.descrizione')
+            ))
+            ->add('id', 'hidden')
         ;
     }
 
@@ -63,7 +68,6 @@ class AfferenzaAdmin extends Admin
         $showMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('id')
         ;
     }
 }
