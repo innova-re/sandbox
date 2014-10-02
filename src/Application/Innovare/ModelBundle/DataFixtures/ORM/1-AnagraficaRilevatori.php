@@ -3,22 +3,22 @@
 
 namespace Application\Innovare\ModelBundle\DataFixtures\ORM;
 
-use Application\Innovare\ModelBundle\Entity\AnagraficaRilevatori;
-use Doctrine\Common\DataFixtures\FixtureInterface;
-use Doctrine\Common\DataFixtures\OrderedFixturesInterface;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Application\Innovare\ModelBundle\Entity\AnagraficaRilevatori;
 
 /*
  * Fixture for the AnagraficaRilevatori Entity
  */
-class LoadAnagraficaRivelatoriData implements FixtureInterface
+class LoadAnagraficaRivelatoriData extends AbstractFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritDoc}
      */
     public function getOrder()
     {
-        return 10;
+        return 1;
     }
 
     /**

@@ -3,24 +3,16 @@
 
 namespace Application\Innovare\ModelBundle\DataFixtures\ORM;
 
-use Application\Innovare\ModelBundle\Entity\Ente;
-use Doctrine\Common\DataFixtures\FixtureInterface;
-use Doctrine\Common\DataFixtures\OrderedFixturesInterface;
+use Doctrine\Common\DataFixtures\AbstractFixture;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Application\Innovare\ModelBundle\Entity\Ente;
 
 /*
  * Fixture for the Ente Entity
  */
-class LoadEnteData implements FixtureInterface
+class LoadEnteData extends AbstractFixture implements OrderedFixtureInterface
 {
-    /**
-     * {@inheritDoc}
-     */
-    public function getOrder()
-    {
-        return 1;
-    }
-
     /**
      * {@inheritDoc}
      */
@@ -39,5 +31,15 @@ class LoadEnteData implements FixtureInterface
             $manager->persist($ente);
         }
         $manager->flush();
+
+        $this->addReference('entes', $ente);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrder()
+    {
+        return 3;
     }
 }

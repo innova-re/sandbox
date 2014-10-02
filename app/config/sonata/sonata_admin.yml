@@ -50,15 +50,28 @@ sonata_admin:
             - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss }}
 
         groups:
-            sonata.admin.group.innovare:
-                label:           Innovare
+
+            sonata.admin.group.struttura:
+                label:           Struttura Organizzativa
                 label_catalogue: InnovareCoreBundle
                 items:
-                    - innovare.admin.afferenza
                     - innovare.admin.macroarea
-                    - innovare.admin.strumenti
-                    - innovare.admin.laboratorio
+                    - innovare.admin.afferenza
+                    - innovare.admin.ambito_intervento
+
+            sonata.admin.group.contatti:
+                label:           Contatti
+                label_catalogue: InnovareCoreBundle
+                items:
                     - innovare.admin.anagrafica_rilevatori
+
+            sonata.admin.group.laboratori:
+                label:           Laboratori
+                label_catalogue: InnovareCoreBundle
+                items:
+                    - innovare.admin.laboratorio
+                    - innovare.admin.strumenti
+
             sonata.admin.group.content:
                 label:           sonata_content
                 label_catalogue: SonataDemoBundle

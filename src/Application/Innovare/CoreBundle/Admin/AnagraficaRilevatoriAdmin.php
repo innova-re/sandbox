@@ -42,9 +42,6 @@ class AnagraficaRilevatoriAdmin extends Admin
             ->add('qualifica')
             ->add('telefono')
             ->add('email')
-            ->add('note')
-            ->add('codiceFiscale')
-            ->add('id')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -67,9 +64,9 @@ class AnagraficaRilevatoriAdmin extends Admin
             ->add('qualifica')
             ->add('telefono')
             ->add('email')
-            ->add('note')
-            ->add('codiceFiscale')
-            ->add('id')
+            ->add('note', 'hidden')
+            ->add('codiceFiscale', 'hidden')
+            ->add('id', 'hidden')
         ;
     }
 
@@ -85,9 +82,6 @@ class AnagraficaRilevatoriAdmin extends Admin
             ->add('qualifica')
             ->add('telefono')
             ->add('email')
-            ->add('note')
-            ->add('codiceFiscale')
-            ->add('id')
         ;
     }
 }
