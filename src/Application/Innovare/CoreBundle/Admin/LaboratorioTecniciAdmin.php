@@ -21,6 +21,7 @@ class LaboratorioTecniciAdmin extends Admin
             ->add('matricola')
             ->add('noteTecnico')
             ->add('id')
+            ->add('idLaboratorio')
         ;
     }
 
@@ -35,6 +36,7 @@ class LaboratorioTecniciAdmin extends Admin
             ->add('matricola')
             ->add('noteTecnico')
             ->add('id')
+            ->add('idLaboratorio')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -56,6 +58,7 @@ class LaboratorioTecniciAdmin extends Admin
             ->add('matricola')
             ->add('noteTecnico')
             ->add('id')
+            ->add('idLaboratorio')
         ;
     }
 
@@ -70,6 +73,7 @@ class LaboratorioTecniciAdmin extends Admin
             ->add('matricola')
             ->add('noteTecnico')
             ->add('id')
+            ->add('idLaboratorio')
         ;
     }
 }
