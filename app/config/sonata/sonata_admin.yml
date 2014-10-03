@@ -59,6 +59,7 @@ sonata_admin:
                     - innovare.admin.afferenza
                     - innovare.admin.area
                     - innovare.admin.ambito_intervento
+                    - innovare.admin.attivita_didattica
 
             sonata.admin.group.contatti:
                 label:           Contatti
