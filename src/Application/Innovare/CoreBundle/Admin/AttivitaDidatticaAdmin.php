@@ -10,6 +10,8 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class AttivitaDidatticaAdmin extends Admin
 {
+    public $supportsPreviewMode = true;
+
     /**
      * @param DatagridMapper $datagridMapper
      */
@@ -18,7 +20,6 @@ class AttivitaDidatticaAdmin extends Admin
         $datagridMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('id')
         ;
     }
 
@@ -30,7 +31,6 @@ class AttivitaDidatticaAdmin extends Admin
         $listMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('id')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -49,7 +49,6 @@ class AttivitaDidatticaAdmin extends Admin
         $formMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('id')
         ;
     }
 
@@ -61,7 +60,6 @@ class AttivitaDidatticaAdmin extends Admin
         $showMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('id')
         ;
     }
 }

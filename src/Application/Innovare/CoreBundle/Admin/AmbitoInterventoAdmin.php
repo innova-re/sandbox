@@ -56,7 +56,6 @@ class AmbitoInterventoAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
-            ->add('id', 'hidden')
         ;
     }
 

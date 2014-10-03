@@ -50,7 +50,6 @@ class AreaAdmin extends Admin
         $formMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('idArea', 'hidden')
         ;
     }
 

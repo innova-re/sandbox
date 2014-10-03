@@ -56,7 +56,6 @@ class AfferenzaAdmin extends Admin
                 'translation_domain' => 'ApplicationInnovareCoreBundle',
                 'attr' => array('placeholder' => 'placeholder.afferenza.descrizione')
             ))
-            ->add('id', 'hidden')
         ;
     }
 
