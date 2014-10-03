@@ -34,3 +34,15 @@ services:
         arguments: [~, Application\Innovare\ModelBundle\Entity\AmbitoIntervento, ApplicationInnovareCoreBundle:AmbitoInterventoAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: AmbitoIntervento}
+
+    innovare.admin.area:
+        class: Application\Innovare\CoreBundle\Admin\AreaAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\Area, ApplicationInnovareCoreBundle:AreaAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Area}
+
+    innovare.admin.attivita_didattica:
+        class: Application\Innovare\CoreBundle\Admin\AttivitaDidatticaAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\AttivitaDidattica, ApplicationInnovareCoreBundle:AttivitaDidatticaAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: AttivitaDidattica}

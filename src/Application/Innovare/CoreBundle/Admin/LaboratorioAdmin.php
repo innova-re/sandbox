@@ -158,7 +158,6 @@ class LaboratorioAdmin extends Admin
             ->add('parolaChiave5')
             ->add('dataPrimaRilevazione')
             ->add('percorsoGps')
-            ->add('idLaboratorio', 'hidden')
         ;
     }
 

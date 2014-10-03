@@ -66,7 +66,6 @@ class AnagraficaRilevatoriAdmin extends Admin
             ->add('email')
             ->add('note', 'hidden')
             ->add('codiceFiscale', 'hidden')
-            ->add('id', 'hidden')
         ;
     }
 
