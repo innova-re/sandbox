@@ -36,6 +36,11 @@ class LaboratorioTecnici
 
     /**
      * @var \Application\Innovare\ModelBundle\Entity\Laboratorio
+     *
+     * @ORM\ManyToOne(targetEntity="Application\Innovare\ModelBundle\Entity\Laboratorio")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_laboratorio", referencedColumnName="id_laboratorio")
+     * })
      */
     private $idLaboratorio;
 
