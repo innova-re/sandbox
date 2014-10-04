@@ -32,7 +32,8 @@ class AfferenzaAdmin extends Admin
         $listMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('idEnte')
+            # TODO the label should be taken from translations
+            ->add('idEnte', 'text', array('label' => 'Ente'))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -70,7 +71,7 @@ class AfferenzaAdmin extends Admin
         $showMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('idEnte')
+            ->add('idEnte', 'text', array('label' => 'Ente'))
         ;
     }
 }
