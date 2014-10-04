@@ -20,6 +20,7 @@ class AfferenzaAdmin extends Admin
         $datagridMapper
             ->add('nome')
             ->add('descrizione')
+            ->add('idEnte')
         ;
     }
 
@@ -31,6 +32,7 @@ class AfferenzaAdmin extends Admin
         $listMapper
             ->add('nome')
             ->add('descrizione')
+            ->add('idEnte')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -56,6 +58,7 @@ class AfferenzaAdmin extends Admin
                 'translation_domain' => 'ApplicationInnovareCoreBundle',
                 'attr' => array('placeholder' => 'placeholder.afferenza.descrizione')
             ))
+            ->add('idEnte')
         ;
     }
 
@@ -67,6 +70,7 @@ class AfferenzaAdmin extends Admin
         $showMapper
             ->add('nome')
             ->add('descrizione')
+            ->add('idEnte')
         ;
     }
 }

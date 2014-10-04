@@ -26,6 +26,11 @@ class Afferenza
 
     /**
      * @var \Application\Innovare\ModelBundle\Entity\Ente
+     *
+     * @ORM\ManyToOne(targetEntity="Application\Innovare\ModelBundle\Entity\Ente")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_ente", referencedColumnName="id_ente")
+     * })
      */
     private $idEnte;
 
