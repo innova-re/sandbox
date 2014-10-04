@@ -66,6 +66,7 @@ sonata_admin:
                 label_catalogue: InnovareCoreBundle
                 items:
                     - innovare.admin.anagrafica_rilevatori
+                    - innovare.admin.laboratorio_tecnici
 
             sonata.admin.group.laboratori:
                 label:           Laboratori
