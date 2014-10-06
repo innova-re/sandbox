@@ -845,7 +845,7 @@ class Laboratorio
     /**
      * Get pubblicare
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getPubblicare()
     {
@@ -1350,5 +1350,13 @@ class Laboratorio
     public function getIdAttivitaRicerca()
     {
         return $this->idAttivitaRicerca;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->nome;
     }
 }
