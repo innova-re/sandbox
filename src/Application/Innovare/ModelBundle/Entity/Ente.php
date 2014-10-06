@@ -80,4 +80,9 @@ class Ente
     {
         return $this->id;
     }
+
+    public function __toString()
+    {
+        return $this->nome;
+    }
 }

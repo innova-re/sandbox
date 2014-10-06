@@ -8,10 +8,8 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class AfferenzaAdmin extends Admin
+class LaboratorioTecniciAdmin extends Admin
 {
-    public $supportsPreviewMode = true;
-
     /**
      * @param DatagridMapper $datagridMapper
      */
@@ -19,8 +17,11 @@ class AfferenzaAdmin extends Admin
     {
         $datagridMapper
             ->add('nome')
-            ->add('descrizione')
-            ->add('idEnte')
+            ->add('cognome')
+            ->add('matricola')
+            ->add('noteTecnico')
+            ->add('id')
+            ->add('idLaboratorio')
         ;
     }
 
@@ -31,9 +32,11 @@ class AfferenzaAdmin extends Admin
     {
         $listMapper
             ->add('nome')
-            ->add('descrizione')
-            # TODO the label should be taken from translations
-            ->add('idEnte', 'text', array('label' => 'Ente'))
+            ->add('cognome')
+            ->add('matricola')
+            ->add('noteTecnico')
+            ->add('id')
+            ->add('idLaboratorio')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -49,17 +52,13 @@ class AfferenzaAdmin extends Admin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
-        # TODO I should avoid to set every time translation_domain by using setDefaultOptions
         $formMapper
-            ->add('nome', 'text', array(
-                'translation_domain' => 'ApplicationInnovareCoreBundle',
-                'attr' => array('placeholder' => 'placeholder.afferenza.nome')
-            ))
-            ->add('descrizione', 'text', array(
-                'translation_domain' => 'ApplicationInnovareCoreBundle',
-                'attr' => array('placeholder' => 'placeholder.afferenza.descrizione')
-            ))
-            ->add('idEnte')
+            ->add('nome')
+            ->add('cognome')
+            ->add('matricola')
+            ->add('noteTecnico')
+            ->add('id')
+            ->add('idLaboratorio')
         ;
     }
 
@@ -70,8 +69,11 @@ class AfferenzaAdmin extends Admin
     {
         $showMapper
             ->add('nome')
-            ->add('descrizione')
-            ->add('idEnte', 'text', array('label' => 'Ente'))
+            ->add('cognome')
+            ->add('matricola')
+            ->add('noteTecnico')
+            ->add('id')
+            ->add('idLaboratorio')
         ;
     }
 }
