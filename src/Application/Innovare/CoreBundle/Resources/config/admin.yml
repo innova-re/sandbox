@@ -52,3 +52,10 @@ services:
         arguments: [~, Application\Innovare\ModelBundle\Entity\LaboratorioTecnici, ApplicationInnovareCoreBundle:LaboratorioTecniciAdmin]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: LaboratorioTecnici}
+
+    innovare.admin.ente:
+        class: Application\Innovare\CoreBundle\Admin\EnteAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\Ente, ApplicationInnovareCoreBundle:EnteAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Ente}
+
