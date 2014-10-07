@@ -216,6 +216,11 @@ class Laboratorio
 
     /**
      * @var \Application\Innovare\ModelBundle\Entity\Area
+     *
+     * @ORM\ManyToOne(targetEntity="Application\Innovare\ModelBundle\Entity\Area")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_area", referencedColumnName="id_area")
+     * })
      */
     private $idArea;
 
