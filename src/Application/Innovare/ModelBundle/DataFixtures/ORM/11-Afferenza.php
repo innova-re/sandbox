@@ -31,14 +31,15 @@ class LoadAfferenzaData extends AbstractFixture implements OrderedFixtureInterfa
 
         // TODO instead of specifying the external key number I should set the name from the "Ente.nome" Entity
         $afferenzas = array(
-            array('Cesar', 'Cesar', 1),
-            array('Polilab', 'Polilab', 1),
+            array('CeSAR - UniCA', 'CeSAR', 1),
+            array('PoliLab', 'PoliLab', 1),
             array('Dipartimento Universitario', 'Dipartimento Universitario', 1),
-            array('Laboratori didattici', 'Laboratori didattici', 1),
+            array('Laboratorio didattico', 'Laboratorio didattico', 1),
             array('Consorzi interdipartimentali', 'Consorzi interdipartimentali', 1),
-            array('Altro (specificare nelle note)', 'Altro (specificare nelle note)', 1),
-            array('Afferenza_SardegnaRicerche1', 'Afferenza_SardegnaRicerche1', 2),
-            array('Afferenza_SardegnaRicerche2', 'Afferenza_SardegnaRicerche2', 2),
+            array('Centro Grandi Strumenti', 'Centro Grandi Strumenti', 1),
+            array('CeSAR - UniSS', 'CeSAR', 2),
+            array('Afferenza_SardegnaRicerche1', 'Afferenza_SardegnaRicerche1', 3),
+            array('Afferenza_SardegnaRicerche2', 'Afferenza_SardegnaRicerche2', 3),
         );
 
         foreach ($afferenzas as $key => $value) {

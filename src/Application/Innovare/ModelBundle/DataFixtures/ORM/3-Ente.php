@@ -20,8 +20,12 @@ class LoadEnteData extends AbstractFixture implements OrderedFixtureInterface
     {
         $entes = array(
             array('Universita Degli Studi di Cagliari', 'Universita degli Studi di Cagliari'),
-            array('Sardegnaricerche', 'Sardegnaricerche'),
             array('Universita Degli Studi di Sassari', 'Universita Degli Studi di Sassari'),
+            array('Sardegna Ricerche', 'Sardegna Ricerche'),
+            array('CNR', 'CNR'),
+            array('Centri di Competenza', 'Centri di Competenza'),
+            array('Centri di Ricerca', 'Centri di Ricerca'),
+            array('Consorzi Interuniversitari', 'Consorzi Interuniversitari'),
         );
 
         foreach ($entes as $key => $value) {
