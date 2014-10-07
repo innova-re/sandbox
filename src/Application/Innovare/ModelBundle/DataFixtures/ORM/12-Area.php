@@ -40,7 +40,7 @@ class LoadAreaData extends AbstractFixture implements OrderedFixtureInterface
             array('Dipartimento di Ingegneria Meccanica, Chimica e dei Materiali', 'descrizione dipartimento', 1),
             array('Dipartimento di Matematica e Informatica', 'descrizione dipartimento', 1),
             array('Dipartimento di Pedagogia, Psicologia, Filosofia', 'descrizione dipartimento', 1),
-            array('Dipartimento di Sanità Pubblica, Medicina Clinica e Molecolare', 'descrizione dipartimento', 1),
+            array('Dipartimento di Sanita Pubblica, Medicina Clinica e Molecolare', 'descrizione dipartimento', 1),
             array('Dipartimento di Scienze Biomediche', 'descrizione dipartimento', 1),
             array('Dipartimento di Scienze Chimiche e Geologiche', 'descrizione dipartimento', 1),
             array('Dipartimento di Scienze Chirurgiche', 'descrizione dipartimento', 1),
