@@ -216,16 +216,31 @@ class Laboratorio
 
     /**
      * @var \Application\Innovare\ModelBundle\Entity\Area
+     *
+     * @ORM\ManyToOne(targetEntity="Application\Innovare\ModelBundle\Entity\Area")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_area", referencedColumnName="id_area")
+     * })
      */
     private $idArea;
 
     /**
      * @var \Application\Innovare\ModelBundle\Entity\Ente
+     *
+     * @ORM\ManyToOne(targetEntity="Application\Innovare\ModelBundle\Entity\Ente")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_ente", referencedColumnName="id_ente")
+     * })
      */
     private $idEnte;
 
     /**
      * @var \Application\Innovare\ModelBundle\Entity\Afferenza
+     *
+     * @ORM\ManyToOne(targetEntity="Application\Innovare\ModelBundle\Entity\Afferenza")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_afferenza", referencedColumnName="id_afferenza")
+     * })
      */
     private $idAfferenza;
 
