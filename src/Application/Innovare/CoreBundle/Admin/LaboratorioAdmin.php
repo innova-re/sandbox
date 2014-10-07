@@ -94,6 +94,8 @@ class LaboratorioAdmin extends Admin
     {
         $formMapper
             ->add('idArea')
+            ->add('idEnte')
+            ->add('idAfferenza')
             ->add('nome', 'text', array(
                 'translation_domain' => 'ApplicationInnovareCoreBundle',
                 'attr' => array('placeholder' => 'placeholder.laboratorio.nome'),
