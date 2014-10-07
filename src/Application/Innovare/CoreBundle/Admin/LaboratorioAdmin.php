@@ -119,9 +119,18 @@ class LaboratorioAdmin extends Admin
             ->add('infoRegolamentoAccesso')
             ->add('note')
             ->add('codice')
-            ->add('createAt')
-            ->add('dataAggiornamentoRilevazione')
-            ->add('updateAt')
+            ->add('createAt', 'date', array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
+            ))
+            ->add('dataAggiornamentoRilevazione', 'date', array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
+            ))
+            ->add('updateAt', 'date', array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
+            ))
             ->add('descrizioneWeb')
             ->add('cap')
             ->add('pubblicare')
@@ -134,7 +143,10 @@ class LaboratorioAdmin extends Admin
             ->add('parolaChiave3')
             ->add('parolaChiave4')
             ->add('parolaChiave5')
-            ->add('dataPrimaRilevazione')
+            ->add('dataPrimaRilevazione', 'date', array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
+            ))
             ->add('percorsoGps')
         ;
     }
