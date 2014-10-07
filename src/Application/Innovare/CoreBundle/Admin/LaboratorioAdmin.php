@@ -65,41 +65,19 @@ class LaboratorioAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('notaEnte')
-            ->add('notaAfferenza')
-            ->add('notaArea')
             ->add('nome')
             ->add('descrizione')
             ->add('paroleChiave')
-            ->add('sede')
-            ->add('edificio')
-            ->add('ubicazione')
-            ->add('piano')
             ->add('indirizzo')
-            ->add('numeroCivico')
-            ->add('gpsLatitudine')
-            ->add('gpsLongitudine')
-            ->add('telefono')
             ->add('sitoweb')
-            ->add('idRegolamentoAccesso')
-            ->add('infoRegolamentoAccesso')
-            ->add('note')
-            ->add('codice')
-            ->add('createAt')
-            ->add('dataAggiornamentoRilevazione')
-            ->add('updateAt')
-            ->add('descrizioneWeb')
-            ->add('cap')
-            ->add('pubblicare')
-            ->add('stanza')
-            ->add('commentiRilevazione')
-            ->add('parolaChiave1')
-            ->add('parolaChiave2')
-            ->add('parolaChiave3')
-            ->add('parolaChiave4')
-            ->add('parolaChiave5')
-            ->add('dataPrimaRilevazione')
-            ->add('percorsoGps')
+            ->add('idRegolamentoAccesso', null, array(
+                'translation_domain' => 'ApplicationInnovareCoreBundle',
+                'label' => 'label.laboratorio.idRegolamentoAccesso'
+            ))
+            ->add('pubblicare', null, array(
+                'translation_domain' => 'ApplicationInnovareCoreBundle',
+                'label' => 'label.laboratorio.pubblicare'
+            ))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),

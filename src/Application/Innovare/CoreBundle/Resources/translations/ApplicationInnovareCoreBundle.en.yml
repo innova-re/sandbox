@@ -5,3 +5,7 @@ placeholder:
   laboratorio:
     nome: Inserisci il nome del laboratorio (campo obbligatorio)
     notaAfferenza: Inserisci una descrizione (campo obbligatorio)
+label:
+  laboratorio:
+    idRegolamentoAccesso: Norme
+    pubblicare: pubblico
