@@ -69,7 +69,6 @@ class LaboratorioAdmin extends Admin
             ->add('descrizione')
             ->add('paroleChiave')
             ->add('indirizzo')
-            ->add('sitoweb')
             ->add('idRegolamentoAccesso', null, array(
                 'translation_domain' => 'ApplicationInnovareCoreBundle',
                 'label' => 'label.laboratorio.idRegolamentoAccesso'
