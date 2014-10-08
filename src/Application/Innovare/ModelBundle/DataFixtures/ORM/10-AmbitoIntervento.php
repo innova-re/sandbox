@@ -114,7 +114,7 @@ class LoadAmbitoInterventoData extends AbstractFixture implements OrderedFixture
         foreach ($ambitoInterventos as $key => $value) {
             $ambitoIntervento = new AmbitoIntervento();
             $ambitoIntervento->setNome($value[0]);
-            $ambitoIntervento->setIdMacroarea($macroareas[$value[1]-1);
+            $ambitoIntervento->setIdMacroarea($macroareas[$value[1]]);
             $manager->persist($ambitoIntervento);
         }
 
