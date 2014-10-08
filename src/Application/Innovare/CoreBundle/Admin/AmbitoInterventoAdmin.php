@@ -22,7 +22,9 @@ class AmbitoInterventoAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
+            ->add('idMacroarea')
             ->add('id')
+
         ;
     }
 
@@ -36,6 +38,8 @@ class AmbitoInterventoAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
+            # TODO the label should be taken from translations
+            ->add('idMacroarea', 'text', array('label' => 'Macroarea'))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -56,6 +60,7 @@ class AmbitoInterventoAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
+            ->add('idMacroarea')
         ;
     }
 
@@ -69,6 +74,7 @@ class AmbitoInterventoAdmin extends Admin
             ->add('descrizione')
             ->add('note')
             ->add('nomeWeb')
+            ->add('idMacroarea')
         ;
     }
 }
