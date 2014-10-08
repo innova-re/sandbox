@@ -68,8 +68,8 @@ class LoadAreaData extends AbstractFixture implements OrderedFixtureInterface
             array('Filiera 4. Efficienza Energetica', 'descrizione filiera', 4),
             array('Filiera 5. Ergonomia e Fattori Umani nei Sistemi di Trasporto e dell’Industria', 'descrizione filiera', 4),
         // Ente --> Afferenza
-            array('Area_CeSAR_UniSS', 'descrizione area', 7)
-            array('Area_Sardegna_Ricerche', 'descrizione area', 8)
+            array('Area_CeSAR_UniSS', 'descrizione area', 7),
+            array('Area_Sardegna_Ricerche', 'descrizione area', 8),
         );
 
         foreach ($areas as $key => $value) {
