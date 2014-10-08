@@ -1,5 +1,5 @@
 <?php
-// src/Appication/Innovare/ModelBundle/DataFixtures/ORM/3-AttivitaDidattica.php
+// src/Appication/Innovare/ModelBundle/DataFixtures/ORM/6-ServizioTerritorio.php
 
 namespace Application\Innovare\ModelBundle\DataFixtures\ORM;
 
