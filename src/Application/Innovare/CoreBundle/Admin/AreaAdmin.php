@@ -20,6 +20,7 @@ class AreaAdmin extends Admin
         $datagridMapper
             ->add('nome')
             ->add('descrizione')
+            ->add('idAfferenza')
             ->add('idArea')
         ;
     }
@@ -32,6 +33,8 @@ class AreaAdmin extends Admin
         $listMapper
             ->add('nome')
             ->add('descrizione')
+             # TODO the label should be taken from translations
+            ->add('idAfferenza', 'text', array('label' => 'Afferenza'))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -50,6 +53,7 @@ class AreaAdmin extends Admin
         $formMapper
             ->add('nome')
             ->add('descrizione')
+            ->add('idAfferenza')
         ;
     }
 
@@ -61,6 +65,7 @@ class AreaAdmin extends Admin
         $showMapper
             ->add('nome')
             ->add('descrizione')
+            ->add('idAfferenza')
         ;
     }
 }

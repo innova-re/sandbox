@@ -56,10 +56,10 @@ sonata_admin:
                 label_catalogue: InnovareCoreBundle
                 items:
                     - innovare.admin.macroarea
-                    - innovare.admin.afferenza
-                    - innovare.admin.ente
-                    - innovare.admin.area
                     - innovare.admin.ambito_intervento
+                    - innovare.admin.ente
+                    - innovare.admin.afferenza
+                    - innovare.admin.area
                     - innovare.admin.attivita_didattica
 
             sonata.admin.group.contatti:

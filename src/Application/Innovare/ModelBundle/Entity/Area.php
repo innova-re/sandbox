@@ -86,6 +86,7 @@ class Area
         return $this->idArea;
     }
 
+
     /**
      * Set idAfferenza
      *
@@ -109,11 +110,12 @@ class Area
         return $this->idAfferenza;
     }
 
-    /**
-     * @return string 
-     */
     public function __toString()
     {
         return $this->nome;
     }
+
+
+
+    
 }
