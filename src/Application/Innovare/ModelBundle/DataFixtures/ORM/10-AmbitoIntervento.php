@@ -98,14 +98,14 @@ class LoadAmbitoInterventoData extends AbstractFixture implements OrderedFixture
             array('Elettronica di potenza', 5),
             array('Automazione', 5),
             //Scienze della Vita
-            array('Farmaceutico', 6),
-            array('Cosmetico', 6),
-            array('Biomedicina', 6),
-            array('Biotecnologie', 6),
-            array('Microbiologia', 6),
-            array('Bioingegneria', 6),
-            array('Nanotecnologie', 6),
-            array('Zootecnologie', 6),
+            array('Farmaceutico', 5),
+            array('Cosmetico', 5),
+            array('Biomedicina', 5),
+            array('Biotecnologie', 5),
+            array('Microbiologia', 5),
+            array('Bioingegneria', 5),
+            array('Nanotecnologie', 5),
+            array('Zootecnologie', 5),
 
             
 
