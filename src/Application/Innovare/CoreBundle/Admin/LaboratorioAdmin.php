@@ -93,9 +93,10 @@ class LaboratorioAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('idArea')
+            
             ->add('idEnte')
             ->add('idAfferenza')
+            ->add('idArea')
             ->add('nome', 'text', array(
                 'translation_domain' => 'ApplicationInnovareCoreBundle',
                 'attr' => array('placeholder' => 'placeholder.laboratorio.nome'),

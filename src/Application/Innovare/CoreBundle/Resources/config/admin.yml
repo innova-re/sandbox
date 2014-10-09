@@ -53,6 +53,24 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Attività di Ricerca}
 
+    innovare.admin.fondi_acquisto:
+        class: Application\Innovare\CoreBundle\Admin\FondiAcquistoAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\FondiAcquisto, ApplicationInnovareCoreBundle:FondiAcquistoAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Fondi d'Acquisto}
+
+    innovare.admin.servizio_territorio:
+        class: Application\Innovare\CoreBundle\Admin\ServizioTerritorioAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\ServizioTerritorio, ApplicationInnovareCoreBundle:ServizioTerritorioAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Servizi al Territorio}
+
+    innovare.admin.categoria_strumento:
+        class: Application\Innovare\CoreBundle\Admin\CategoriaStrumentoAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\CategoriaStrumento, ApplicationInnovareCoreBundle:CategoriaStrumentoAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Categorie Strumenti}
+
     innovare.admin.laboratorio_tecnici:
         class: Application\Innovare\CoreBundle\Admin\LaboratorioTecniciAdmin
         arguments: [~, Application\Innovare\ModelBundle\Entity\LaboratorioTecnici, ApplicationInnovareCoreBundle:LaboratorioTecniciAdmin]

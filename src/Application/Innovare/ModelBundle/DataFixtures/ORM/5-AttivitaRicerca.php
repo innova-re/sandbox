@@ -21,6 +21,7 @@ class LoadAttivitaRicercaData extends AbstractFixture implements OrderedFixtureI
         $attivitaRicercas = array(
             array('Collaborazioni Universitarie - Progetti Nazionali'),
             array('Collaborazioni Universitarie - Progetti Internazionali'),
+            array('Collaborazioni altro tipo'),
         );
 
         foreach ($attivitaRicercas as $key => $value) {
