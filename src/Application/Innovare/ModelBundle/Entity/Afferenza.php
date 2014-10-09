@@ -92,6 +92,14 @@ class Afferenza
     }
 
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->nome;
+    }
+
+    /**
      * Set idEnte
      *
      * @param \Application\Innovare\ModelBundle\Entity\Ente $idEnte
@@ -114,11 +122,5 @@ class Afferenza
         return $this->idEnte;
     }
 
-    /**
-     * @return string 
-     */
-    public function __toString()
-    {
-        return $this->nome;
-    }
+    
 }

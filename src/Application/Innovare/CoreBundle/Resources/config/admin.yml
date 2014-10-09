@@ -27,13 +27,13 @@ services:
         class: Application\Innovare\CoreBundle\Admin\AnagraficaRilevatoriAdmin
         arguments: [~, Application\Innovare\ModelBundle\Entity\AnagraficaRilevatori, ApplicationInnovareCoreBundle:AnagraficaRilevatoriAdmin]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: AnagraficaRilevatori}
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Anagrafica Rilevatori}
 
     innovare.admin.ambito_intervento:
         class: Application\Innovare\CoreBundle\Admin\AmbitoInterventoAdmin
         arguments: [~, Application\Innovare\ModelBundle\Entity\AmbitoIntervento, ApplicationInnovareCoreBundle:AmbitoInterventoAdmin]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: AmbitoIntervento}
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Ambito di Intervento}
 
     innovare.admin.area:
         class: Application\Innovare\CoreBundle\Admin\AreaAdmin
@@ -45,13 +45,19 @@ services:
         class: Application\Innovare\CoreBundle\Admin\AttivitaDidatticaAdmin
         arguments: [~, Application\Innovare\ModelBundle\Entity\AttivitaDidattica, ApplicationInnovareCoreBundle:AttivitaDidatticaAdmin]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: AttivitaDidattica}
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Attività Didattica}
+
+    innovare.admin.attivita_ricerca:
+        class: Application\Innovare\CoreBundle\Admin\AttivitaRicercaAdmin
+        arguments: [~, Application\Innovare\ModelBundle\Entity\AttivitaRicerca, ApplicationInnovareCoreBundle:AttivitaRicercaAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Attività di Ricerca}
 
     innovare.admin.laboratorio_tecnici:
         class: Application\Innovare\CoreBundle\Admin\LaboratorioTecniciAdmin
         arguments: [~, Application\Innovare\ModelBundle\Entity\LaboratorioTecnici, ApplicationInnovareCoreBundle:LaboratorioTecniciAdmin]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: LaboratorioTecnici}
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Tecnici Laboratorio}
 
     innovare.admin.ente:
         class: Application\Innovare\CoreBundle\Admin\EnteAdmin

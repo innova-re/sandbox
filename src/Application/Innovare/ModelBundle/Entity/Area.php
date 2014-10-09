@@ -110,12 +110,12 @@ class Area
         return $this->idAfferenza;
     }
 
+    
+    /**
+     * @return string
+     */
     public function __toString()
     {
         return $this->nome;
-    }
-
-
-
-    
+    }  
 }

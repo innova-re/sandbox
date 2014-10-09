@@ -29,28 +29,20 @@ class LoadAmbitoInterventoData extends AbstractFixture implements OrderedFixture
     public function load(ObjectManager $manager)
     {
         $macroareas = $manager->getRepository('ApplicationInnovareModelBundle:Macroarea')->findAll();
-        // Macroaree:
-        //    1 => 'Agroalimentare',
-        //    2 => 'Biosanitario',
-        //    3 => 'Costruzioni e Beni Culturali',
-        //    4 => 'Energia, Materiali e Ambienti',
-        //    5 => 'ICT e Design',
-        //    6 => 'Scienze della Vita',
-
         $ambitoInterventos = array(
             
-            //Agroalimentare
+            // Agroalimentare
             array('Agronomico', 1),
             array('Alimentare', 1),
             array('Vivaistico', 1),
             array('Zoologico', 1),
-            //Biosanitario
+            // Biosanitario
             array('Medicina dello sport', 2),
             array('Medicina legale', 2),
             array('Medicina del lavoro', 2),
             array('Diagnostico', 2),
             array('Fisica sanitaria e radioprotezione', 2),
-            //Costruzioni e Beni Culturali
+            // Costruzioni e Beni Culturali
             array('Idraulica', 3),
             array('Archeologia', 3),
             array('Architettura', 3),
@@ -66,7 +58,7 @@ class LoadAmbitoInterventoData extends AbstractFixture implements OrderedFixture
             array('Ergonomia e Fattori Umani nei Sistemi di Trasporto e nell’Industria', 3),
             array('Analisi Acustiche', 3),
             array('Biomeccanica ed Ergonomia Industriale', 3),
-            //Energia, Materiali e Ambienti
+            // Energia, Materiali e Ambienti
             array('Generazione Elettrica', 4),
             array('Chimica di Processo', 4),
             array('Analisi Ambientali', 4),
@@ -74,7 +66,7 @@ class LoadAmbitoInterventoData extends AbstractFixture implements OrderedFixture
             array('Industria Manifatturiera', 4),
             array('Energia Alternativa e Rinnovabile', 4),
             array('Sintesi e analisi dei materiali', 4),
-            //ICT e Design
+            // ICT e Design
             array('Sistemi Embedded', 5),
             array('Digital Signal Processing', 5),
             array('Microelettronica', 5),
@@ -97,7 +89,7 @@ class LoadAmbitoInterventoData extends AbstractFixture implements OrderedFixture
             array('Misure elettroniche', 5),
             array('Elettronica di potenza', 5),
             array('Automazione', 5),
-            //Scienze della Vita
+            // Scienze della Vita
             array('Farmaceutico', 6),
             array('Cosmetico', 6),
             array('Biomedicina', 6),
@@ -106,9 +98,6 @@ class LoadAmbitoInterventoData extends AbstractFixture implements OrderedFixture
             array('Bioingegneria', 6),
             array('Nanotecnologie', 6),
             array('Zootecnologie', 6),
-
-            
-
         );
 
         foreach ($ambitoInterventos as $key => $value) {

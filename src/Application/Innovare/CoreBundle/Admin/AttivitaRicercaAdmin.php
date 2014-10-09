@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class AmbitoInterventoAdmin extends Admin
+class AttivitaRicercaAdmin extends Admin
 {
     public $supportsPreviewMode = true;
 
@@ -20,10 +20,6 @@ class AmbitoInterventoAdmin extends Admin
         $datagridMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('note')
-            ->add('nomeWeb')
-            ->add('idMacroarea')
-            ->add('id')
         ;
     }
 
@@ -35,10 +31,6 @@ class AmbitoInterventoAdmin extends Admin
         $listMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('note')
-            ->add('nomeWeb')
-            # TODO the label should be taken from translations
-            ->add('idMacroarea', 'text', array('label' => 'Macroarea'))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -57,9 +49,6 @@ class AmbitoInterventoAdmin extends Admin
         $formMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('note')
-            ->add('nomeWeb')
-            ->add('idMacroarea')
         ;
     }
 
@@ -71,9 +60,6 @@ class AmbitoInterventoAdmin extends Admin
         $showMapper
             ->add('nome')
             ->add('descrizione')
-            ->add('note')
-            ->add('nomeWeb')
-            ->add('idMacroarea')
         ;
     }
 }
