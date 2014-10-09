@@ -60,7 +60,22 @@ sonata_admin:
                     - innovare.admin.ente
                     - innovare.admin.afferenza
                     - innovare.admin.area
+
+            sonata.admin.group.attivita:
+                label:           Elenchi 
+                label_catalogue: InnovareCoreBundle
+                items:
                     - innovare.admin.attivita_didattica
+                    - innovare.admin.attivita_ricerca
+                    - innovare.admin.fondi_acquisto
+                    - innovare.admin.servizio_territorio
+
+            sonata.admin.group.cataloghi:
+                 label:           Cataloghi 
+                 label_catalogue: InnovareCoreBundle
+                 items:
+                     - innovare.admin.categoria_strumento
+            #         - innovare.admin.catalogo_servizi
 
             sonata.admin.group.contatti:
                 label:           Contatti
